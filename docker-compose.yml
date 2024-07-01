@@ -3,7 +3,6 @@ services:
   cloudflared:
     image: ghcr.io/miladiir/cloudflared-wget:latest
     environment:
-      - TUNNEL_METRICS=127.0.0.1:2000
       - TUNNEL_TOKEN=${TUNNEL_TOKEN}
     command: tunnel --no-autoupdate run
     restart: unless-stopped

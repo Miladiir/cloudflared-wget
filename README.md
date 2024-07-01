@@ -1,7 +1,10 @@
 Docker Healthcheck ready cloudflared
 ===
 
-I didnt get the HEALTHCHECK instruction in the Dockerfile to work for some reason. An example on how to implement the actual healthcheck is included in the docker-compose.yml.
+Use the integrated healthcheck located at /bin/docker-healthcheck.sh to check the metrics /ready endpoint.
+
+This increases image size by a lot unfortunately. I couldn't get busybox wget to work inside the cloudflared image by itself, so I opted to copy the cloudflared binary into busybox instead.
+This also increases the attack surface of the container, which is not ideal.
 
 Things to note:
 - Rebuild as soon as upstream pushes new changes.
