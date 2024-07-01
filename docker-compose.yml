@@ -1,7 +1,7 @@
 ---
 services:
   cloudflared:
-    image: ghcr.io/miladiir/cloudflared-wget:latest
+    image: ghcr.io/miladiir/cloudflared-wget:latest@sha256:e0e2c724fa8ce1dc2c44dbab622842a84da2d3ece41bb256c09c6945ebd1d76e
     environment:
       - TUNNEL_METRICS=127.0.0.1:2000
       - TUNNEL_TOKEN=${TUNNEL_TOKEN}
