@@ -1,7 +1,7 @@
 ---
 services:
   cloudflared:
-    image: ghcr.io/miladiir/cloudflared-wget:latest
+    image: ghcr.io/miladiir/cloudflared-wget:latest@sha256:a9321d94d236d17111a9983527998f20be842c2dbd3388d2e67b8cf6deaabff0
     environment:
       - TUNNEL_TOKEN=${TUNNEL_TOKEN}
     command: tunnel --no-autoupdate run
