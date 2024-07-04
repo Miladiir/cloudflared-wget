@@ -1,8 +1,0 @@
----
-services:
-  cloudflared:
-    image: ghcr.io/miladiir/cloudflared-wget:latest
-    environment:
-      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
-    command: tunnel --no-autoupdate run
-    restart: unless-stopped

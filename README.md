@@ -10,3 +10,14 @@ Things to note:
 - Rebuild as soon as upstream pushes new changes.
 - I don't provide semver since it would be a hassle to track cloudflares versioning (yyyy-mm-patch). Grab :latest and pin the image version with sha hash for poor mans versioning.
 
+Example docker-compose.yml
+```
+---
+services:
+  cloudflared:
+    image: ghcr.io/miladiir/cloudflared-wget:latest
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    command: tunnel --no-autoupdate run
+    restart: unless-stopped
+```
