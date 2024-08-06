@@ -6,8 +6,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: |
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Check if image exists
+        run: |
           IMAGE_NAME=$(grep -m 1 '^COPY --from=' Dockerfile | sed 's/.*--from=\([^ ]*\).*/\1/')
           echo "Checking image: $IMAGE_NAME"
           if docker manifest inspect $IMAGE_NAME > /dev/null 2>&1; then
