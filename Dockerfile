@@ -1,4 +1,4 @@
-FROM busybox:1.36.1-glibc@sha256:25e9fcbd3799fce9c0ec978303d35dbb18a6ffb1fc76fc9b181dd4e657e2cd13 as busybox
+FROM busybox:1.36.1-glibc@sha256:3289bb3bffbac896ee73626c836d711b8b998552f36d56b9dff498ba472a8ecb as busybox
 
 LABEL org.opencontainers.image.source = "https://github.com/Miladiir/cloudflared-wget"
 
