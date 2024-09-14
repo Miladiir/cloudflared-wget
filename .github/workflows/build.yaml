@@ -4,8 +4,8 @@ on:
     branches:
       - main
     paths:
-      - /Dockerfile
-      - /docker-healthcheck.sh
+      - Dockerfile
+      - docker-healthcheck.sh
   workflow_dispatch:
 jobs:
   docker:
