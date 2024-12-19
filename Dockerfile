@@ -2,7 +2,7 @@ FROM busybox:1.37.0-glibc@sha256:c598938e58d0efcc5a01efe9059d113f22970914e05e39a
 
 LABEL org.opencontainers.image.source = "https://github.com/Miladiir/cloudflared-wget"
 
-COPY --from=cloudflare/cloudflared:latest@sha256:fc6afe4a5dcf2a801b39fcd538c9d5d4d53ea229fe9976584835bdb8c185ed5d /usr/local/bin/cloudflared /bin
+COPY --from=cloudflare/cloudflared:latest@sha256:cb38f3f30910a7d51545118a179b8516eb7066eac61855d62ce6ed733c54ce70 /usr/local/bin/cloudflared /bin
 COPY ./docker-healthcheck.sh /bin
 
 ENV TUNNEL_METRICS=127.0.0.1:1337
